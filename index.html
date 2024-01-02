@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles.css">
+    <title>TIC-TAC-TOE</title>
+</head>
+
+<body>
+    <header class="container">
+        <button class="new_game_btn hidden" id="new_game_btn">NEW GAME</button>
+        <img src="static/logo.png" alt="TIC TAC TOE logo" class="logo">
+    </header>
+    <!-- MODAL FORM -->
+    <div class="container form">
+        <h2 class="index">New Game:</h2>
+        <form class="form">
+            <div class="inside_form">
+                <div class="form_players">
+                    <div>
+                        <label class="field" for="player_one_field">X:</label>
+                        <input type="text" placeholder="Player 1" autocomplete="off" name="player_one"
+                            id="player_one_field">
+                    </div>
+                    <div>
+                        <label class="field" for="player_two_field">O:</label>
+                        <input type="text" placeholder="Player 2" autocomplete="off" name="player_two"
+                            id="player_two_field">
+                    </div>
+                </div>
+            </div>
+            <div class="inside_form">
+                <fieldset>
+                    <legend>Number of games:</legend>
+                    <input type="radio" id="game_number_one" name="game_number_field" value="1" checked>
+                    <label for="game_number_one">One</label>
+                    <input type="radio" id="game_number_two" name="game_number_field" value="2">
+                    <label for="game_number_two">Two</label>
+                    <input type="radio" id="game_number_three" name="game_number_field" value="3">
+                    <label for="game_number_three">Three</label>
+                </fieldset>
+            </div>
+            <div class="inside_form">
+                <button type="submit" class="btn_form">START</button>
+            </div>
+        </form>
+    </div>
+    <!--END MODAL FORM -->
+    <!-- GAME -->
+    <div class="container game hidden">
+        <!-- GAMEBOARD -->
+        <div class="gameboard">
+            <div class="cells">
+                <div class="cell one"></div>
+                <div class="cell two"></div>
+                <div class="cell three"></div>
+            </div>
+            <div class="cells">
+                <div class="cell four"></div>
+                <div class="cell five"></div>
+                <div class="cell six"></div>
+            </div>
+            <div class="cells">
+                <div class="cell seven"></div>
+                <div class="cell eight"></div>
+                <div class="cell nine"></div>
+            </div>
+            <!-- END GAMEBOARD -->
+            <!--  -->
+            <!-- SCOREBOARD -->
+            <div class="scoreboard">
+                <div class="score">
+                    <p><span id="message_span" class="cross">X, it's your turn!</span><br><span
+                            class="final_winner_message"></span>
+                    </p>
+                </div>
+                <div class="score">
+                    <h4>Round: <span id="counter_game">-</span> / <span id="games_no">-</span></h4>
+                </div>
+                <h1>SCORE:</h1>
+                <div class="scores_container">
+                    <h2><span class="crossName_span cross">X</span> : <span id="cross_player_span"
+                            class="cross">0</span></h2>
+                    <h2><span class="noughtName_span nought">O</span> : <span id="nought_player_span"
+                            class="nought">0</span></h2>
+                </div>
+                <div class="score">
+                    <h2>Draws: <span id="draws_span">0</span></h2>
+                </div>
+                <div class="score">
+                    <button class="btn_next_round hidden">Next Round</button>
+                </div>
+            </div>
+            <!-- END SCOREBOARD -->
+        </div>
+    </div>
+    <footer>Final project CS50x 2023.</footer>
+    <script src="static/script.js"></script>
+</body>
+
+</html>

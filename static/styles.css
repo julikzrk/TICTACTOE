@@ -1,0 +1,305 @@
+/* importing the font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;700;800;900&family=Raleway:wght@800&display=swap');
+
+/* colour palette */
+:root {
+    --sandy: #f5ebe0;
+    --sandy-hover: #ece1c1;
+    --dark: #001219;
+    --dark-transparent: rgba(00, 12, 19, 0.5);
+    --salmon: #CA6702;
+    --breeze: #0A9396;
+    --crimson: #9b2226;
+    --crimson-hover: #AE2012;
+}
+
+/* default settings */
+* {
+    background-color: var(--sandy);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* body settings */
+body {
+    min-height: 95vh;
+    min-width: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--dark);
+    overflow: scroll;
+}
+
+
+/* header setting */
+header.container {
+    height: 100px;
+    width: 100%;
+    margin: 15px 0 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+#new_game_btn {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+}
+
+/* button style */
+button {
+    height: 50px;
+    padding: 5px 20px;
+    border-radius: 10px;
+    background-color: inherit;
+    color: var(--crimson);
+    font-weight: 600;
+    font-size: 16px;
+    border: 3px solid var(--crimson);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--crimson-hover);
+    color: var(--sandy);
+    box-shadow: 5px 2px 5px rgb(255, 255, 255, 1);
+}
+
+/* footer settings */
+footer {
+    text-align: center;
+    bottom: 10px;
+    font-size: 10px;
+    font-weight: 300;
+    margin-top: 15px;
+}
+
+/* index page header text */
+h2.index {
+    margin: 15px 0 10px 0;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--dark);
+}
+
+
+/* index page form */
+.container.form {
+    min-height: 40vh;
+    width: 400px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    position: absolute;
+    top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: solid var(--sandy-hover);
+    border-radius: 30px;
+}
+
+form div {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+form input {
+    padding: 5px 0;
+    border: 1px solid var(--dark-transparent);
+    border-radius: 5px;
+    text-align: center;
+}
+
+input::placeholder {
+    font-size: 0.9rem;
+    font-weight: inherit;
+    text-align: center;
+    opacity: 70%;
+}
+
+.inside_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_players {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+}
+
+div.form_players div {
+    margin: 0;
+}
+
+fieldset {
+    border: 0;
+}
+
+legend {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+fieldset input {
+    visibility: hidden;
+}
+
+
+fieldset input:checked+label {
+    background: var(--crimson);
+    color: var(--sandy);
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+label.field,
+legend {
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+fieldset label {
+    font-size: 0.9rem;
+}
+
+/* GAME STYLES */
+
+/* cross style */
+.cross {
+    color: var(--breeze);
+}
+
+/* nought style */
+.nought {
+    color: var(--salmon);
+}
+
+/* gameboard setup */
+div.gameboard {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    width: 300px;
+}
+
+.cells {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* grid */
+.cell {
+    width: 90px;
+    height: 90px;
+    border: 2.4px solid var(--dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell:hover {
+    background-color: var(--sandy-hover);
+}
+
+.cell img {
+    width: 90%;
+}
+
+.cell.one {
+    border-top: none;
+    border-left: none;
+}
+
+.cell.two {
+    border-top: none;
+}
+
+.cell.three {
+    border-top: none;
+    border-right: none;
+}
+
+.cell.four {
+    border-left: none;
+}
+
+.cell.six {
+    border-right: none;
+}
+
+.cell.seven {
+    border-left: none;
+    border-bottom: none;
+}
+
+.cell.eight {
+    border-bottom: none;
+}
+
+.cell.nine {
+    border-right: none;
+    border-bottom: none;
+}
+
+/* scoreboard style */
+.scoreboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.scores_container {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.score {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.score p {
+    margin-top: 15px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 10px;
+    /* border-top: 2px solid var(--dark-transparent); */
+}
+
+h4 {
+    font-weight: bold;
+    font-size: 0.75rem;
+    margin: 10px 0;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+
+
+
+/* hidden elements */
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
